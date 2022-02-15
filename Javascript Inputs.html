@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title></title>
+	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<!--jQuery library-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<!--JavaScript-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<style>
+		
+			
+			
+		</style>
+		
+	
+	</head>
+	
+	
+	<body>
+	
+	<script type="text/javascript">
+	
+		//The user is prompted for an input, which is displayed within the <p></p> tags
+		//If there is no user input, "Nothing for Desvendir!" is displayed instead
+		function something()
+		{
+			
+			var Desvendir = "Anything for Desvendir?";
+			var messageDes = prompt(Desvendir);
+			
+			if(messageDes == '')
+			{
+				document.getElementById('output').innerHTML = "Nothing for Desvendir!";
+				
+			}
+			else
+			{
+				document.getElementById('output').innerHTML = messageDes;
+			}
+			
+		}
+		
+		function somethingElse()
+		{
+			//Anything entered in the input box is displayed in the <p></p>
+			//"Nothing to see here!" is displayed in the case of an emoty input box
+			var Des = document.getElementById('des').value;
+			
+			
+			if(Des == '')
+			{
+				document.getElementById('output').innerHTML = "Nothing to see here!";
+				document.getElementById('des').value = '';
+			}
+			else
+			{
+				document.getElementById('output').innerHTML = Des;
+				document.getElementById('des').value = '';
+			}
+			
+		}
+	
+	</script>
+		
+		
+		<div class="container-fluid">
+		
+			<label for="des">Desvendir's Box</label><input type="text" id="des" class="form-control"><br>
+			<button class="btn btn-success" onClick="something();">Desvendir's Clicky Button</button><br><br>
+			<button class="btn btn-info" onClick="somethingElse();">Desvendir's Input Clicky Button</button><br><br>
+			<p id="output"></p>
+		
+		</div>
+	
+	
+	</body>
+
+
+</html>
